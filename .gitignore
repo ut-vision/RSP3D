@@ -1,0 +1,15 @@
+# Claude Code session data
+.claude
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+
+data/visualizations
+**/__pycache__/
+**.pyc
+
+
+assets
+scripts/vis_alignment/

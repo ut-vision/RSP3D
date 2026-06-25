@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="RSP3D: Prosthesis-Aware 3D Human Pose Estimation dataset and benchmark for running-specific prosthesis users.">
+  <meta name="keywords" content="RSP3D, prosthesis, 3D pose estimation, human motion capture">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prosthesis-Aware 3D Human Pose Estimation: A Dataset and Benchmark for RSP Users</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Prosthesis-Aware 3D Human Pose Estimation: A Dataset and Benchmark for RSP Users</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://fylwen.github.io/" target="_blank">Yilin Wen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://kechuan-ln.github.io/" target="_blank">Kechuan Dong</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Fumiya Suginaka<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.sonycsl.co.jp/people/ken-endo/" target="_blank">Ken Endo</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.yusuke-sugano.info/" target="_blank">Yusuke Sugano</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Tokyo,</span>
+            <span class="author-block"><sup>2</sup>Sony Computer Science Laboratories</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper (arXiv)</span>
+                </a>
+              </span>
+              <!-- Supplementary -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-google-drive"></i>
+                  </span>
+                  <span>Supplementary</span>
+                </a>
+              </span>
+              <!-- Dataset -->
+              <span class="link-block">
+                <a href="download.html" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <!-- Code -->
+              <span class="link-block">
+                <a href="https://github.com/ut-vision/RSP3D" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recovering 3D human body motion from video is important for applications such as rehabilitation assessment and sports performance evaluation.
+            For prosthesis users, however, this requires capturing both the natural body joints and the geometry of the prosthetic device, which existing methods are not designed to address.
+            Model-based estimators rely on body models trained on non-amputee individuals and cannot represent prosthesis geometry, while model-free reconstruction methods lack body kinematic priors and are unreliable under occlusion.
+            Neither approach alone can address this task, and the lack of suitable data has prevented any systematic study.
+          </p>
+          <p>
+            This challenge is particularly prominent for users of running-specific prostheses (RSPs), where the RSP has a complex curved geometry and moves dynamically during exercise.
+            To fill this gap, we collect RSP3D, the first 3D dataset of RSP users, covering essential daily-life and exercise actions from participants with diverse amputation conditions, using a multi-camera setup with marker-based motion capture.
+            We formally define the task of prosthesis-aware 3D pose estimation and evaluate representative model-based and model-free methods in a zero-shot setting, confirming their individual limitations.
+            Based on these findings, we propose a hybrid baseline that combines model-based body joint estimation with model-free RSP shape recovery, establishing a starting point for future research on this task.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Presentation Video (uncomment when YouTube video is ready)
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID?rel=0&showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- Dataset Samples -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Dataset Samples</h2>
+    <div class="columns is-centered">
+      <div class="column">
+        <video controls muted loop playsinline style="width:100%; border-radius:8px;">
+          <source src="gt1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <video controls muted loop playsinline style="width:100%; border-radius:8px;">
+          <source src="gt2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{wen2026rsp3d,
+  title     = {Prosthesis-Aware 3D Human Pose Estimation: A Dataset and Benchmark for RSP Users},
+  author    = {Wen, Yilin and Dong, Kechuan and Suginaka, Fumiya and Endo, Ken and Sugano, Yusuke},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Contact</h2>
+    <p>
+      If you have any questions, feel free to contact
+      <a href="mailto:blade@ut-vision.org">blade@ut-vision.org</a>.
+    </p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is built using the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> template,
+            licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSP3D Dataset Download</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    .terms-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.25rem;
+    }
+    .terms-list li {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 0.4rem;
+      background: #fafafa;
+      border: 1px solid #efefef;
+      line-height: 1.6;
+      overflow: hidden;
+    }
+    .terms-list li span:last-child {
+      min-width: 0;
+      flex: 1;
+    }
+    .terms-list li pre {
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .terms-list li .term-num {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #363636;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-top: 0.1rem;
+    }
+    .access-box {
+      background: #f5f5f5;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    .access-box .processing-note {
+      margin-top: 1rem;
+      color: #777;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RSP3D Dataset</h1>
+          <p class="is-size-5">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Project Page</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop content">
+
+    <!-- Data Use Agreement -->
+    <h2 class="title is-3">RSP3D Dataset — Data Use Agreement</h2>
+    <p class="has-text-grey is-size-7">Version 1.0 — June 25, 2026</p>
+
+    <div class="notification is-warning is-light" style="margin-top: 1rem;">
+      <strong>For Research Purpose ONLY. No commercial usage is allowed.</strong>
+    </div>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">1. Definitions</h3>
+    <p><strong>"Dataset"</strong> refers to the RSP3D dataset, including all video recordings, motion capture data, 3D annotations, metadata, and any associated documentation distributed under this Agreement.</p>
+    <p><strong>"Dataset Provider"</strong> means the institution, laboratory, or authorized representative responsible for distributing the Dataset under this Agreement.</p>
+    <p><strong>"Licensee"</strong> refers to the individual who has applied for and received access to the Dataset.</p>
+    <p><strong>"Responsible AI Research Purposes"</strong> means non-commercial academic or public-interest research that aims to advance or evaluate methods for prosthesis-aware human motion analysis, 3D human pose estimation, assistive technology, rehabilitation, sports science, fairness, safety, or dataset governance, and whose methods, results, and outputs are not used for identification, surveillance, discriminatory, exploitative, or real-world consequential decision-making purposes with respect to any individual or group.</p>
+    <p><strong>"Derived Materials"</strong> means features, embeddings, model weights, checkpoints, reconstructed 3D bodies or prosthesis shapes, synthetic samples, rendered images or videos, annotations, and any other data or artifacts generated from or using the Dataset, excluding ordinary academic publications, presentation slides, figures, tables, and aggregate evaluation results that do not enable reconstruction of the Dataset or identification of participants.</p>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">2. Grant of License</h3>
+    <p>Subject to the terms of this Agreement, the Dataset Provider grants the Licensee a limited, non-exclusive, non-transferable license to use the Dataset for Responsible AI Research Purposes only, and only for the specific research described in the approved application.</p>
+    <p>This license does not transfer any ownership of the Dataset to the Licensee. All rights not expressly granted here are reserved by the Dataset Provider.</p>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">3. Permitted Uses</h3>
+    <p>The Licensee may:</p>
+    <ul>
+      <li>Use the Dataset to conduct research consistent with Responsible AI Research Purposes.</li>
+      <li>Use the Dataset to develop and evaluate methods for the purposes described in the approved application.</li>
+      <li>Include figures or results derived from the Dataset in academic publications and presentations, provided that the Dataset is properly cited (see Section 5).</li>
+      <li>Use the Dataset for training, fine-tuning, or evaluating foundation models or other large-scale models, only when such use is clearly described in the approved application.</li>
+    </ul>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">4. Restrictions</h3>
+    <p>The Licensee may not:</p>
+    <ul>
+      <li><strong>(a) Redistribute the Dataset.</strong> The Licensee may not share, publish, or transfer the Dataset or any part of it to any third party, in its original or modified form. This includes Derived Materials that could reasonably enable reconstruction of the Dataset or identification of participants.</li>
+      <li><strong>(b) Use the Dataset for commercial purposes.</strong> The Licensee may not use the Dataset or any non-public Derived Materials for commercial applications, products, services, internal commercial development, or commercial model training.</li>
+      <li><strong>(c) Attempt to re-identify participants.</strong> The Licensee may not attempt to identify any individual participant in the Dataset, or link the data to any external source for the purpose of identifying individuals.</li>
+      <li><strong>(d) Store or handle the data insecurely.</strong> The Licensee must store the Dataset on access-controlled systems, protect credentials, and prohibit storage in public repositories, public cloud buckets, or shared drives with unrestricted access.</li>
+      <li><strong>(e) Use the Dataset beyond the scope of the approved application.</strong> Any change in research purpose or institutional affiliation requires a new application or written amendment approved by the Dataset Provider.</li>
+      <li><strong>(f) Use the Dataset for high-risk or harmful purposes.</strong> The Licensee may not use the Dataset, or any Derived Materials obtained from it, for biometric identification or verification, person recognition, person search, re-identification, identity-based tracking or tracking of identified or identifiable persons, surveillance, law-enforcement, border-control, military, intelligence, employment screening, insurance, credit, housing, or other real-world consequential decision-making purposes.</li>
+      <li><strong>(g) Infer sensitive attributes for discriminatory purposes.</strong> The Licensee may not use the Dataset to infer, classify, or make claims about a person's disability status, health condition, physical capability, or other sensitive attributes for discriminatory, exploitative, or consequential purposes, except where such analysis is explicitly approved in the application and conducted for non-commercial assistive, rehabilitation, fairness, or scientific purposes.</li>
+      <li><strong>(h) Publicly release Derived Materials without approval.</strong> The Licensee may not publish, distribute, or transfer model weights, embeddings, or other Derived Materials if they could reasonably enable reconstruction of the Dataset or identification of participants.</li>
+    </ul>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">5. Citation Requirement</h3>
+    <p>Any publication, presentation, or public release of results that uses or references the Dataset must cite the following paper:</p>
+    <pre style="background:#f5f5f5; border-radius:6px; padding:1rem; font-size:0.85rem; overflow-x:auto;"><code>@inproceedings{wen2026rsp3d,
+  title     = {Prosthesis-Aware 3D Human Pose Estimation: A Dataset and Benchmark for RSP Users},
+  author    = {Wen, Yilin and Dong, Kechuan and Suginaka, Fumiya and Endo, Ken and Sugano, Yusuke},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+}</code></pre>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">6. Ethical Use</h3>
+    <p>The Licensee acknowledges that the Dataset contains sensitive human-subject data relating to prosthesis users and physical disability. The Licensee must ensure that all use of the Dataset is consistent with the approved application, applicable laws, and institutional ethics requirements. This Agreement does not itself constitute ethics approval, IRB approval, or legal authorization for the Licensee's research project.</p>
+    <p>The Licensee agrees to:</p>
+    <ul>
+      <li>Use the Dataset in a manner that respects the dignity and privacy of all participants.</li>
+      <li>Follow the ethical guidelines and regulations of their institution.</li>
+      <li>Comply with all applicable laws regarding the use of data collected from human subjects.</li>
+    </ul>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">7. No Warranties</h3>
+    <p>The Dataset is provided "as is" without warranty of any kind. The Dataset Provider makes no representations regarding the accuracy, completeness, or fitness for any particular purpose of the Dataset. In no event shall the Dataset Provider be liable for any damages arising from the use of the Dataset.</p>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">8. Termination</h3>
+    <p>This license is effective from the date of approval and continues until terminated. The license terminates automatically if the Licensee violates any of its terms. The Dataset Provider may also withdraw access if it reasonably determines that the Licensee has violated, or is likely to violate, this Agreement, or if continued access would create legal, ethical, security, or participant-protection concerns.</p>
+    <p>Upon termination or withdrawal of approval, the Licensee must cease all use of the Dataset, delete all copies of the Dataset and any Derived Materials that could enable reconstruction or re-identification, and provide written confirmation of deletion upon request by the Dataset Provider.</p>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">9. Acceptance</h3>
+    <p>By submitting the application, receiving access, or downloading or using the Dataset, the Licensee confirms that they have read, understood, and agreed to all terms of this Agreement.</p>
+
+    <hr>
+
+    <!-- How to get access -->
+    <h2 class="title is-3">How to Get Access</h2>
+    <p>
+      Please submit an access application via the Google Form below. Provide your name, affiliation, position, and intended use. Access will be granted to academic email addresses only.
+    </p>
+
+    <div class="access-box">
+      <a href="https://forms.gle/5My1AeuMYwpkY2r38"
+         target="_blank"
+         rel="noopener"
+         class="button is-dark is-medium is-rounded">
+        <span class="icon"><i class="fab fa-wpforms"></i></span>
+        <span>Apply for Access (Google Form)</span>
+      </a>
+      <p class="processing-note">
+        <i class="fas fa-clock"></i>
+        &nbsp;Applications will be processed within <strong>2–3 working days</strong>.
+      </p>
+    </div>
+
+    <hr>
+
+    <!-- Contact -->
+    <h2 class="title is-3">Contact</h2>
+    <p>
+      If you have any questions or special circumstances, please contact
+      <a href="mailto:blade@ut-vision.org">blade@ut-vision.org</a>.
+    </p>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is built using the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> template,
+            licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
