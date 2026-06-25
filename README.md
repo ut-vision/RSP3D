@@ -55,11 +55,9 @@ We propose a hybrid alignment pipeline that combines **SAM3D** (model-based body
 
 ### 1. Download assets
 
-Download the pre-computed detection results and model-based / model-free outputs from the link below, and set the path in `utils/constants.py`:
+Download the pre-computed detection results and model-based / model-free outputs ([link](https://drive.google.com/drive/folders/1UbXrPFYvIkNgFtJ1vkn9ik3BEEOXG6al?usp=sharing)), and set the path in `utils/constants.py`:
 
-```
-[Google Drive link — to be provided]
-```
+
 
 ```python
 PATH_ASSETS = '/path/to/assets/'   # root containing detection/, sam3d/, spatial_tracker/ subdirs
