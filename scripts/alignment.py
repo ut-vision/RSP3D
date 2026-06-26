@@ -181,9 +181,6 @@ def align_segment(recording_dataloader, h5f_model_free, h5f_model_base, dir_outp
     meta_key_clip   = caction['meta_key']
     dst_h5_path = os.path.join(dir_output, subject_id_clip, f"{meta_key_clip}.h5")
 
-    saved_results = load_alignment_h5(dst_h5_path)
-    if saved_results:
-        print(f"  Loaded {len(saved_results)} saved frames from {dst_h5_path}")
 
     all_frame_indices: list = []
     all_results:       list = []
@@ -312,25 +309,6 @@ def align_segment(recording_dataloader, h5f_model_free, h5f_model_base, dir_outp
             }
             if blade2_3d_est is not None:
                 frame_result['blade2_3d_est'] = blade2_3d_est
-
-
-            # Check against saved result if available
-            if clip_frame_idx in saved_results:
-                sv = saved_results[clip_frame_idx]
-                body_match  = np.allclose(frame_result['body_3d_est'],  sv['body_3d_est'],  atol=1e-5)
-                n_cur, n_sv = len(frame_result['blade_3d_est']), len(sv['blade_3d_est'])
-                blade_match = (n_cur == n_sv) and np.allclose(frame_result['blade_3d_est'], sv['blade_3d_est'], atol=1e-5)
-                blade2_match = True
-                if 'blade2_3d_est' in frame_result and 'blade2_3d_est' in sv:
-                    n2_cur, n2_sv = len(frame_result['blade2_3d_est']), len(sv['blade2_3d_est'])
-                    blade2_match = (n2_cur == n2_sv) and np.allclose(frame_result['blade2_3d_est'], sv['blade2_3d_est'], atol=1e-5)
-                elif 'blade2_3d_est' in frame_result or 'blade2_3d_est' in sv:
-                    blade2_match = False
-                if body_match and blade_match and blade2_match:
-                    print(f"  [MATCH]    clip_frame {clip_frame_idx}")
-                else:
-                    print(f"  [MISMATCH] clip_frame {clip_frame_idx}: "
-                          f"body={body_match}, blade={blade_match} (cur={n_cur} sv={n_sv}), blade2={blade2_match}")
 
             all_frame_indices.append(clip_frame_idx)
             all_results.append(frame_result)

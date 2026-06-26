@@ -48,7 +48,7 @@ VIT_SKELETON_COLOR = ['red','green','red','green','red','red','red','green','gre
 
 
 PATH_ASSETS         = '../assets/'
-PATH_DATASET        =  '/home/fylwen/WS/blade_project/assets/release'
+PATH_DATASET        =  '/home/fylwen/WS/blade_project/assets/release_v1'
 PATH_DETECTIONS = os.path.join(PATH_ASSETS, 'detections')
 PATH_DETECTION_BBOXES = os.path.join(PATH_DETECTIONS, 'bbox')
 PATH_DETECTION_VITPOSE = os.path.join(PATH_DETECTIONS, 'vitpose')
