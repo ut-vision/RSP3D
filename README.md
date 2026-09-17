@@ -2,7 +2,7 @@
 
 Official implementation of the paper by Yilin Wen, Kechuan Dong, Fumiya Suginaka, Ken Endo, and Yusuke Sugano: "Prosthesis-Aware 3D Human Pose Estimation: A Dataset and Benchmark for RSP Users", ECCV 2026.
 
-[[Paper (arXiv)]]() | [[Supplementary]]() | [[Dataset]](https://ut-vision.github.io/RSP3D/download.html) | [[Project Page]](https://ut-vision.github.io/RSP3D/)
+[[Paper (arXiv)]](https://arxiv.org/abs/2609.18406) | [[Dataset]](https://ut-vision.github.io/RSP3D/download.html) | [[Project Page]](https://ut-vision.github.io/RSP3D/)
 
 
 ## Citation
